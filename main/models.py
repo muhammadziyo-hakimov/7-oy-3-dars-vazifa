@@ -12,7 +12,7 @@ class Product(models.Model):
     name = models.CharField(max_length=200)
     desc = models.TextField()
     price = models.PositiveSmallIntegerField()
-    category = models.CharField(max_length=100)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
     is_active = models.BooleanField(default=True)
 
 
